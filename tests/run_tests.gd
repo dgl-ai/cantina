@@ -2,6 +2,9 @@
 ## Run: godot --headless --path . --script tests/run_tests.gd
 extends SceneTree
 
+const BotConfigScript := preload("res://scripts/model/bot_config.gd")
+const UIFactoryScript := preload("res://scripts/view/ui_factory.gd")
+
 var _pass_count: int = 0
 var _fail_count: int = 0
 
@@ -10,7 +13,6 @@ func _init() -> void:
 	print("=== Cantina Tests ===")
 	_test_project_structure()
 	_test_bots_json()
-	_test_config_autoload()
 	_test_ui_factory()
 	_print_results()
 	quit(0 if _fail_count == 0 else 1)
@@ -53,22 +55,18 @@ func _test_bots_json() -> void:
 	_check(bots.size() == 7, "bots.json has 7 bots (got " + str(bots.size()) + ")")
 
 	for data in bots:
-		var bot := BotConfig.from_dict(data)
+		var bot = BotConfigScript.from_dict(data)
 		_check(bot.id != "", "Bot has id: " + bot.id)
 		_check(bot.display_name != "", "Bot has display_name: " + bot.display_name)
 		_check(bot.system_prompt != "", "Bot has system_prompt: " + bot.id)
 
 
-func _test_config_autoload() -> void:
-	_check(true, "Config autoload (tested via project.godot)")
-
-
 func _test_ui_factory() -> void:
-	var btn := UIFactory.make_button("Test", Vector2(100, 50))
+	var btn = UIFactoryScript.make_button("Test", Vector2(100, 50))
 	_check(btn != null, "UIFactory.make_button works")
-	var close := UIFactory.make_close_button()
+	var close = UIFactoryScript.make_close_button()
 	_check(close != null, "UIFactory.make_close_button works")
-	var lbl := UIFactory.make_label("Test")
+	var lbl = UIFactoryScript.make_label("Test")
 	_check(lbl != null, "UIFactory.make_label works")
 
 
