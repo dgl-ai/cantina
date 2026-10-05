@@ -1,0 +1,25 @@
+# Godot
+.godot/
+*.translation
+
+# Exports
+build/
+*.aab
+*.apk
+*.pck
+*.zip
+
+# Credentials (NEVER commit)
+.env
+*.keystore
+*.jks
+export_credentials.cfg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
+*.swo
