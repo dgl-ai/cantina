@@ -1,0 +1,84 @@
+{
+  "project": "cantina",
+  "generated": "2026-10-07",
+  "assets": [
+    {
+      "id": "001",
+      "path": "assets/tilesets/cantina_floor.png",
+      "sheet_px": [
+        128,
+        32
+      ],
+      "cell_px": [
+        32,
+        32
+      ],
+      "rows": 1,
+      "cols": 4,
+      "valid_cells": null,
+      "empty_cells": null,
+      "clips": "static",
+      "pivot": null,
+      "provider": "SpriteCook generate_game_art",
+      "job_id": "324dbf27-d9e3-449d-b9bb-a142a93d477d",
+      "asset_id": "10c5739a-03dd-4345-9cd3-e0ab3332a71f",
+      "model": "gemini-nano-banana-2.1 (SpriteCook)",
+      "references": [
+        "referencia-estilo-01.png",
+        null
+      ]
+    },
+    {
+      "id": "002",
+      "path": "assets/tilesets/cantina_walls.png",
+      "sheet_px": [
+        128,
+        128
+      ],
+      "cell_px": [
+        32,
+        32
+      ],
+      "rows": 1,
+      "cols": 4,
+      "valid_cells": null,
+      "empty_cells": null,
+      "clips": "static",
+      "pivot": null,
+      "provider": "SpriteCook generate_game_art",
+      "job_id": "21a3de86-fb9d-40b0-b3a4-ced93cfee371",
+      "asset_id": "ea5eac33-3b63-4421-aaac-c94a1eeeaa7e",
+      "model": "gemini-nano-banana-2.1 (SpriteCook)",
+      "references": [
+        "referencia-estilo-01.png",
+        null
+      ]
+    },
+    {
+      "id": "005",
+      "path": "assets/sprites/props/poker_table.png",
+      "sheet_px": [
+        224,
+        192
+      ],
+      "cell_px": [
+        224,
+        192
+      ],
+      "rows": 1,
+      "cols": 7,
+      "valid_cells": null,
+      "empty_cells": null,
+      "clips": "static",
+      "pivot": null,
+      "provider": "SpriteCook generate_game_art",
+      "job_id": "d58f2262-8ed9-41eb-93ad-65fbb7446974",
+      "asset_id": "9ccc273e-ae58-48d5-9867-b2d26f1518cb",
+      "model": "gemini-nano-banana-2.1 (SpriteCook)",
+      "references": [
+        "referencia-estilo-01.png",
+        "ref-T05-poker_table.png"
+      ]
+    }
+  ]
+}
